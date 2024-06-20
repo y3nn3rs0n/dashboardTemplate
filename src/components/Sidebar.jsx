@@ -7,6 +7,7 @@ import { LiaChartBarSolid } from "react-icons/lia";
 import { BiWorld } from "react-icons/bi";
 import { signOut } from 'firebase/auth';
 import { auth } from '../firebase-config';
+import { IoMdMenu } from "react-icons/io";
 
 export const Sidebar = () => {
 
@@ -28,7 +29,7 @@ export const Sidebar = () => {
 
   return (
     <>
-       <div className= {`bg-secondary-100 xl:h[100vh] fixed xl:static w-[80%] md:w[40%] lg:w[30%] xl:w-auto h-full top-0 p-8 flex flex-col justify-between z-50 transition-all ${showMenu ? "left-0" : "-left-full"}` }>
+       <div className= {`bg-secondary-100 xl:h[100vh] fixed xl:static w-[70%] md:w-[40%] lg:w-[30%] xl:w-auto h-full top-0 p-8 flex flex-col justify-between z-50 transition-all ${showMenu ? "left-0" : "-left-full"}` }>
       <div>
         <h1 className='text-center text-white text-2xl '>Admin Module<span className='text-primary text-4xl'>.</span></h1>
         <ul>
@@ -62,8 +63,8 @@ export const Sidebar = () => {
       <button onClick={() => logOut()} className='mt-10 flex items-center py-2 px-4 gap-4 rounded-lg hover:bg-secondary-900 transition-colors'><MdOutlineLogout  className='text-primary'/>Log Out</button>
         </nav>
     </div>
-    <button onClick={() => setShowmenu(!showMenu)} className='fixed bottom-4 right-4 bg-primary z-50 rounded-full p3 xl:hidden text-black'>
-    <IoIosArrowDropdown className='text-primary'/>
+    <button onClick={() => setShowmenu(!showMenu)} className='fixed bottom-4 right-4 bg-primary z-50 rounded-full p-2 xl:hidden text-black'>
+    <IoMdMenu className='text-secondary-100'/>
     </button>
     </>
     

@@ -23,7 +23,7 @@ export const ForgetPassword = () => {
         </div>
         <div className="relative">
           <RiLockFill className="absolute top-1/2 -translate-y-1/2 left-2"/>
-          <input type= {showPassword ? "text" : "password"} className='mb-4 px-8 py-3 px-4 bg-secondary-900 w-full outline-none rounded-lg' 
+          <input type= {showPassword ? "text" : "password"} className='mb-4 px-8 py-3 bg-secondary-900 w-full outline-none rounded-lg' 
           placeholder='Contraseña'
           />
            <RiEyeFill onClick={() => setshowPassword (!showPassword)} className="absolute top-1/2 -translate-y-1/2 right-2 hover:cursor-pointer"/>
